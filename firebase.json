@@ -1,1 +1,41 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"car-rent-app-7139b","appId":"1:917706034914:android:731e00125340b2ddf498bb","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"car-rent-app-7139b","appId":"1:917706034914:ios:b4b1ff6a40fc58a2f498bb","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"macos":{"default":{"projectId":"car-rent-app-7139b","appId":"1:917706034914:ios:b4b1ff6a40fc58a2f498bb","uploadDebugSymbols":false,"fileOutput":"macos/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"car-rent-app-7139b","configurations":{"android":"1:917706034914:android:731e00125340b2ddf498bb","ios":"1:917706034914:ios:b4b1ff6a40fc58a2f498bb","macos":"1:917706034914:ios:b4b1ff6a40fc58a2f498bb","web":"1:917706034914:web:8365622a7b5cdde1f498bb","windows":"1:917706034914:web:cf5818fb4d69a04af498bb"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "car-rent-app-7139b",
+          "appId": "1:917706034914:android:731e00125340b2ddf498bb",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "car-rent-app-7139b",
+          "appId": "1:917706034914:ios:b4b1ff6a40fc58a2f498bb",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "car-rent-app-7139b",
+          "appId": "1:917706034914:ios:b4b1ff6a40fc58a2f498bb",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "car-rent-app-7139b",
+          "configurations": {
+            "android": "1:917706034914:android:731e00125340b2ddf498bb",
+            "ios": "1:917706034914:ios:b4b1ff6a40fc58a2f498bb",
+            "macos": "1:917706034914:ios:b4b1ff6a40fc58a2f498bb",
+            "web": "1:917706034914:web:8365622a7b5cdde1f498bb",
+            "windows": "1:917706034914:web:cf5818fb4d69a04af498bb"
+          }
+        }
+      }
+    }
+  }
+}
