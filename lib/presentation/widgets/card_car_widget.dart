@@ -1,14 +1,29 @@
 part of 'widget.dart';
 
-class CardCarWiget extends StatelessWidget {
+class CardCarWidget extends StatelessWidget {
   final Car car;
-  final VoidCallback onTap;
-  const CardCarWiget({super.key, required this.car, required this.onTap});
+  const CardCarWidget({
+    super.key,
+    required this.car,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CarDetailsScreen(
+              car: Car(
+                  distance: car.distance,
+                  fuelCapacity: car.fuelCapacity,
+                  model: car.model,
+                  pricePerHour: car.pricePerHour),
+            ),
+          ),
+        );
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         padding: const EdgeInsets.all(20),

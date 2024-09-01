@@ -24,14 +24,8 @@ class CarListScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: car.length,
         itemBuilder: (context, index) {
-          return CardCarWiget(
+          return CardCarWidget(
             car: car[index],
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const CarDetailsScreen()));
-            },
           );
         },
       ),
