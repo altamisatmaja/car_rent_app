@@ -8,6 +8,8 @@ class CarDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        leadingWidth: 0,
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [Icon(Icons.info_outline), Text('Informasi')],
@@ -46,7 +48,7 @@ class CarDetailsScreen extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 40.0,
-                            backgroundImage: AssetImage('asset/user.png'),
+                            backgroundImage: AssetImage('assets/user.png'),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -67,20 +69,30 @@ class CarDetailsScreen extends StatelessWidget {
                     width: 20.0,
                   ),
                   Expanded(
-                    child: Container(
-                      height: 170.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        image: const DecorationImage(
-                            image: AssetImage('assets/maps.png'),
-                            fit: BoxFit.cover),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 10.0,
-                            spreadRadius: 5.0,
-                          )
-                        ],
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MapsDetailsScreen(
+                                      car: car,
+                                    )));
+                      },
+                      child: Container(
+                        height: 170.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: const DecorationImage(
+                              image: AssetImage('assets/maps.png'),
+                              fit: BoxFit.cover),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 10.0,
+                              spreadRadius: 5.0,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   )
