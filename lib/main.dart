@@ -1,13 +1,10 @@
 import 'package:car_rent_app/firebase_options.dart';
-import 'package:car_rent_app/presentation/pages/onboarding_page.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:car_rent_app/presentation/screen/screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // * INITIALIZE FIREBASE
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -15,7 +12,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const OnboardingPage(),
+      home: const OnboardingScreen(),
     );
   }
 }
