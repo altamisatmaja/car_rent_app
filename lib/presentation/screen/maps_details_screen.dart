@@ -28,15 +28,22 @@ class MapsDetailsScreen extends StatelessWidget {
             ],
           ),
           Positioned(
-              bottom: 0,
-              right: 0,
-              left: 0,
-              child: carDetailsCard(
-                  car: Car(
-                      model: car.model,
-                      distance: car.distance,
-                      fuelCapacity: car.fuelCapacity,
-                      pricePerHour: car.pricePerHour)))
+            bottom: 0,
+            right: 0,
+            left: 0,
+            child: carDetailsCard(
+              car: Car(
+                  model: car.model,
+                  distance: car.distance,
+                  fuelCapacity: car.fuelCapacity,
+                  pricePerHour: car.pricePerHour),
+            ),
+          ),
+          Positioned(
+            top: 50,
+            right: 20,
+            child: Image.asset('assets/white_car.png'),
+          )
         ],
       ),
     );
@@ -67,17 +74,17 @@ Widget carDetailsCard({required Car car}) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Text(
                 car.model,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Row(
@@ -85,28 +92,32 @@ Widget carDetailsCard({required Car car}) {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.directions_car, color: Colors.white, size: 16),
-                      SizedBox(
+                      const Icon(Icons.directions_car,
+                          color: Colors.white, size: 16),
+                      const SizedBox(
                         width: 5.0,
                       ),
                       Text(
                         '${car.distance} Km',
-                        style: TextStyle(color: Colors.white, fontSize: 14.0),
+                        style: const TextStyle(
+                            color: Colors.white, fontSize: 14.0),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   Row(
                     children: [
-                      Icon(Icons.directions_car, color: Colors.white, size: 16),
-                      SizedBox(
+                      const Icon(Icons.directions_car,
+                          color: Colors.white, size: 16),
+                      const SizedBox(
                         width: 5.0,
                       ),
                       Text(
                         '${car.fuelCapacity.toString()} L',
-                        style: TextStyle(color: Colors.white, fontSize: 14.0),
+                        style: const TextStyle(
+                            color: Colors.white, fontSize: 14.0),
                       ),
                     ],
                   )
@@ -144,8 +155,8 @@ Widget carDetailsCard({required Car car}) {
                   children: [
                     Text(
                       'Rp ${car.pricePerHour}',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     ElevatedButton(
                         onPressed: () {},
