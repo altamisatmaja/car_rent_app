@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,49 +41,49 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA3z3c0dLf1AYGdNSl11j6lhoA9WN6M9OU',
-    appId: '1:917706034914:web:8365622a7b5cdde1f498bb',
-    messagingSenderId: '917706034914',
-    projectId: 'car-rent-app-7139b',
-    authDomain: 'car-rent-app-7139b.firebaseapp.com',
-    storageBucket: 'car-rent-app-7139b.appspot.com',
-    measurementId: 'G-BYECLH81YE',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_WEB']!,
+    appId: dotenv.env['APP_ID_WEB']!,
+    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID_WEB']!,
+    projectId: dotenv.env['PROJECT_ID_WEB']!,
+    authDomain: dotenv.env['AUTH_DOMAIN_WEB']!,
+    storageBucket: dotenv.env['STORAGE_BUCKET_WEB'],
+    measurementId: dotenv.env['MEASUREMENT_ID_WEB']!,
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAII2T6aIqPkNvhwZQ6my8pV6blZkl5oq8',
-    appId: '1:917706034914:android:731e00125340b2ddf498bb',
-    messagingSenderId: '917706034914',
-    projectId: 'car-rent-app-7139b',
-    storageBucket: 'car-rent-app-7139b.appspot.com',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_ANDROID']!,
+    appId: dotenv.env['APP_ID_ANDROID']!,
+    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID_WEB']!,
+    projectId: dotenv.env['PROJECT_ID_WEB']!,
+    storageBucket: dotenv.env['STORAGE_BUCKET_WEB'],
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBHUbFKDD8vrmcOftQCf0gw2-EcwEEaTCQ',
-    appId: '1:917706034914:ios:b4b1ff6a40fc58a2f498bb',
-    messagingSenderId: '917706034914',
-    projectId: 'car-rent-app-7139b',
-    storageBucket: 'car-rent-app-7139b.appspot.com',
-    iosBundleId: 'com.example.carRentApp',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_MAC_IOS']!,
+    appId: dotenv.env['APP_ID_MAC_IOS']!,
+    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID_WEB']!,
+    projectId: dotenv.env['PROJECT_ID_WEB']!,
+    storageBucket: dotenv.env['STORAGE_BUCKET_WEB'],
+    iosBundleId: dotenv.env['IOS_BUNDLE_ID'],
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBHUbFKDD8vrmcOftQCf0gw2-EcwEEaTCQ',
-    appId: '1:917706034914:ios:b4b1ff6a40fc58a2f498bb',
-    messagingSenderId: '917706034914',
-    projectId: 'car-rent-app-7139b',
-    storageBucket: 'car-rent-app-7139b.appspot.com',
-    iosBundleId: 'com.example.carRentApp',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_MAC_IOS']!,
+    appId: dotenv.env['APP_ID_MAC_IOS']!,
+    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID_WEB']!,
+    projectId: dotenv.env['PROJECT_ID_WEB']!,
+    storageBucket: dotenv.env['STORAGE_BUCKET_WEB'],
+    iosBundleId: dotenv.env['IOS_BUNDLE_ID'],
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA3z3c0dLf1AYGdNSl11j6lhoA9WN6M9OU',
-    appId: '1:917706034914:web:cf5818fb4d69a04af498bb',
-    messagingSenderId: '917706034914',
-    projectId: 'car-rent-app-7139b',
-    authDomain: 'car-rent-app-7139b.firebaseapp.com',
-    storageBucket: 'car-rent-app-7139b.appspot.com',
-    measurementId: 'G-7MK932M29Y',
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_WINDOWS']!,
+    appId: dotenv.env['APP_ID_WINDOWS']!,
+    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID_WEB']!,
+    projectId: dotenv.env['PROJECT_ID_WEB']!,
+    authDomain: dotenv.env['AUTH_DOMAIN_WEB']!,
+    storageBucket: dotenv.env['STORAGE_BUCKET_WEB'],
+    measurementId: dotenv.env['MEASUREMENT_ID_WINDOWS']!,
   );
 }

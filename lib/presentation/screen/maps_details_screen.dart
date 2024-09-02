@@ -40,10 +40,10 @@ class MapsDetailsScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 50,
-            right: 20,
+            bottom: 275,
+            right: 10,
             child: Image.asset('assets/white_car.png'),
-          )
+          ),
         ],
       ),
     );
